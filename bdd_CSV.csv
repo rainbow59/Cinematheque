@@ -1,3 +1,4 @@
 id,titre,description,annee_de_sortie,id_genre,realisateur,acteurs
-aladdin,c'est l'histoire d'un jeune homme pauvre qui tombe amoureux de la princesse d'Agraba, 1995, 3, Disney, Aladdin/JasmineGénie
-Le Livre de la Jungle,c'est l'histoire d'un enfant élevé par des animaux dans la jungle, 1955, 3, Disney, Mowglie/Bagheera/Baloo
+1, aladdin,C'est l'histoire d'un jeune homme pauvre qui tombe amoureux de la princesse d'Agraba, 1995, 3, Disney, Aladdin/JasmineGénie
+2, Le Livre de la Jungle,C'est l'histoire d'un enfant élevé par des animaux dans la jungle, 1955, 3, Disney, Mowglie/Bagheera/Baloo
+3, Mulan, C'est l'histoire d'une jeune chinoise qui prend la place de son père à la guerre. Elle arrive à déjouer l'attaque des Huns et sauve la Chine, 1998, 3, Disney, Mulan/Mushu/Shang
