@@ -15,7 +15,7 @@ $host = '127.0.0.1';
 
 	try {
 		$dbh = new PDO($dbh, $user, $pass, $options);
-	echo 'Connection établie <br>';
+	
 
 	} catch (PDOException $e) {
 		echo 'Connexion échouée : ' . $e->getMessage();
@@ -30,8 +30,8 @@ function getAllRealisateurs() {
 
  function getOneRealisateur($id) {
  	global $dbh;
- 	$realisateur =$dbh -> query('SELECT * FROM `Realisateurs` WHERE id_realisateur = '.$id.';');
- 	return $realisateur->fetchAll();
+ 	$realisateur =$dbh -> query('SELECT * FROM `Realisateurs` WHERE id_realisateur = (SELECT id_realisateur from Films where id_film = '.$id.');');
+ 	return $realisateur->fetch();
  }
 //  function getRealisateurByID() {
 // global $dbh;

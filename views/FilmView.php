@@ -13,10 +13,19 @@
 
         <h2><?=$movie['titre']?></h2>
 
-    <p>coucou!</p>
+
     <ul>
     <li>Sorti en <?=$movie['annee_sortie']?></li>
-    <li>Réalisé par <?=$movie['id_realisateur']?></li>
+    <li>Réalisé par <?=$realisateur['realisateur']?></li>
+    <li>Genre : <?php
+    	if ($genre['id_genre'] == ($genre['id_film'])){
+    foreach ($genres as $key => $genre) {
+    		
+    echo $genre['genre'];
+    	}
+    }
+?>
+</li>
     </ul>
     <h4>Synopsis</h4>
     <p><?=$movie['description']?></p>

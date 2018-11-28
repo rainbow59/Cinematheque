@@ -2,11 +2,14 @@
 
 
 include('models/Film.php');
+include('models/Genre.php');
+include('models/Realisateur.php');
 
-
-
+$id = 2;
 //Récupérer les données (ici, tous les films car on est sur la home)
 $movies = getAllMovies();
+
+$movie = getOneMovie($id);
 
 //traiter les données
 foreach ($movies as $key => $movie) {

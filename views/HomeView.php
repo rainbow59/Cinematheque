@@ -14,9 +14,11 @@
     <ul>
         <!-- Comme la vue est incluse depuis le controller, on a accès à la variables $movies du controller : on fait une boucle pour afficher le titre de chaque film -->
         <?php foreach ($movies as $key => $movie) : ?>
-           <li><?=$movie['titre']?></li>
+           <li><a href="?page=film&id=<?=$movie['id_film']?>"><?=$movie['titre']?></a></li>
         <?php endforeach; ?>
+
     </ul>
-  
+    
+    <p>coucou</p>
 </body>
 </html>

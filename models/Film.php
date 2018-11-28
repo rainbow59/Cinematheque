@@ -15,7 +15,7 @@ $host = '127.0.0.1';
 
 	try {
 		$dbh = new PDO($dbh, $user, $pass, $options);
-	echo 'Connection établie <br>';
+	
 
 	} catch (PDOException $e) {
 		echo 'Connexion échouée : ' . $e->getMessage();
