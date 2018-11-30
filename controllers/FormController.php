@@ -20,6 +20,11 @@ $insert = sendNewMovieToDB($new_titre, $new_description, $new_date);
 $insert_film=sendNewRealToDB($new_realisateur);
  
 
+$update_real=updateTheReal();
+
+
+
+
 include('views/ResultView.php');
 } else {
 include('views/FormView.php');
