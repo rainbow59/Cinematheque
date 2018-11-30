@@ -1,35 +1,26 @@
 <?php
+include('ConnectionBDD.php');
 
-$host = '127.0.0.1';
-	$db = 'Cinematheque';
-	$user ='phpmyadmin';
-	$pass = 'aleth';
-	$charset = 'utf8mb4';
+// function getAllGenres() {
+// 	global $dbh;
+// 	$genres = $dbh->query("SELECT * FROM `Genres`;");
+// 	return $genres->fetchAll();
+// }
 
-	$dbh = "mysql:host=$host;dbname=$db;charset=$charset";
-	$options = [
-		PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
-		PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-		PDO::ATTR_EMULATE_PREPARES   => false,
-	];
-
-	try {
-		$dbh = new PDO($dbh, $user, $pass, $options);
-	
-
-	} catch (PDOException $e) {
-		echo 'Connexion échouée : ' . $e->getMessage();
-	}
-
-function getAllGenres() {
-	global $dbh;
-	$genre = $dbh->query("SELECT * FROM `Genres`;");
-	return $genre->fetchAll();
-}
-
-
- function getOneGenre($id) {
+function getOneGenre($id) {
  	global $dbh;
- 	$genre =$dbh -> query('SELECT * FROM `Genres` WHERE id_genre IN (SELECT id_genre from films_genres where id_film = '.$id.');');
- 	return $genre->fetch();
+ 	$genre =$dbh -> query("SELECT  genre FROM `Genres` JOIN films_genres on films_genres.id_genre = Genres.id_genre JOIN Films on films_genres.id_film = Films.id_film WHERE Films.id_film='".$id."';");
+ 	return $genre->fetchAll();
  }
+
+
+ // function getOneGenre($id) {
+ // 	global $dbh;
+ // 	$genre =$dbh -> query("SELECT  genre from Films, Genres WHERE id_film = '".$id."';");
+ // 	return $genre->fetch();
+ // }
+ // function getOneGenre($id) {
+ // 	global $dbh;
+ // 	$genre =$dbh -> query('SELECT * FROM `Genres`INNER JOIN `Films` ON Genres.id_genre = Films.id_film;');
+ // 	return $genre->fetch();
+ // }

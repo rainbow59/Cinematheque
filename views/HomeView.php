@@ -19,6 +19,6 @@
 
     </ul>
     
-    <p>coucou</p>
+ <p>Cliquez <a href="?page=Form">ici</a> pour rentrer un film dans la base de données</p>
 </body>
 </html>

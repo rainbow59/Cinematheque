@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Annuaire de films - <?=$page?></title>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript"></script>
 </head>
 <body>
 
@@ -18,16 +19,16 @@
     <li>Sorti en <?=$movie['annee_sortie']?></li>
     <li>Réalisé par <?=$realisateur['realisateur']?></li>
     <li>Genre : <?php
-    	if ($genre['id_genre'] == ($genre['id_film'])){
-    foreach ($genres as $key => $genre) {
-    		
-    echo $genre['genre'];
-    	}
-    }
+    	echo $genre['genre'];
+ 
+ 
 ?>
 </li>
     </ul>
     <h4>Synopsis</h4>
     <p><?=$movie['description']?></p>
+
+
+   <a href="?page=Home">Retour à la case départ</a>
 </body>
 </html>

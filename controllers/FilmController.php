@@ -6,13 +6,13 @@ include('models/Genre.php');
 include('models/Realisateur.php');
 
 //Récupérer les données (ici, on est sur la page d'un film précis donc on récupère un seul film en fonction de l'ID)
-$id=$_GET['id']; //Je prends un id arbitrairement, il devra provenir de l'URL en réalité (par ex localhost/MVC2/film/2 pour l'id 2)
-
+$id=$_GET['id'];
 $movie = getOneMovie($id);
 $realisateur = getOneRealisateur($id);
 $genre = getOneGenre($id);
-$genres = getAllGenres($id);
+//$genres = getAllGenres();
 
+var_dump(getOneGenre($id));
 //traiter les données
 $realisateur['realisateur'] = ucfirst($realisateur['realisateur']); //Met une majuscule au nom du réalisateur
 
