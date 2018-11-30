@@ -11,41 +11,48 @@
 <body>
 
     <h1><?=$page?></h1>
-
-        <h2><?=$movie['titre']?></h2>
+<div class="container">
+    <div class="row">
+    <h2><?=$movie['titre']?></h2>
 
 
     <ul>
-    <li>Sorti en <?=$movie['annee_sortie']?></li>
-    <li>Réalisé par <?=$realisateur['realisateur']?></li>
-    <li>Genre : <?php
+        <li>Sorti en <?=$movie['annee_sortie']?></li>
+        <li>Réalisé par <?=$realisateur['realisateur']?></li>
+        <li>Genre : <?php
 
 
 
-foreach ($genre as $key => $genre) {
-  echo $genre['genre'].' ';
+        foreach ($genre as $key => $genre) {
+          echo $genre['genre'].' ';
 
-} 
- 
+      } 
+
 // A trouver plus trd, comment enlever la dernière virgule :
 //echo trim($test, ',');
 // echo 'substr';
 // echo substr($test, 0, strpos($test, ','));
 
-?>
-</li>
-<li>Acteurs : <?php
+      ?>
+  </li>
+  <li>Acteurs : <?php
 
-foreach ($actors as $key => $actors) {
-  echo $actors['acteurs'].', ';
+  foreach ($actors as $key => $actors) {
+      echo $actors['acteurs'].', ';
 
-} 
-?></li>
-    </ul>
-    <h4>Synopsis</h4>
-    <p><?=$movie['description']?></p>
+  } 
+  ?></li>
+</ul>
+<h4>Synopsis</h4>
+<?=$id?>
+<p><?=$movie['description']?></p>
+</div>
+<div class="row">
+<img src="images/photo<?=$id?>.jpg" alt="Affiche du film"/>
+</div>
+</div>
 
-
-   <a href="?page=Home">Retour à la case départ</a>
+<img src="photo2.jpg" alt="Affiche du film"/>
+<a href="?page=Home">Retour à la case départ</a>
 </body>
 </html>

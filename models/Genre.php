@@ -14,6 +14,9 @@ function getOneGenre($id) {
  }
 
 
+
+
+
  // function getOneGenre($id) {
  // 	global $dbh;
  // 	$genre =$dbh -> query("SELECT  genre from Films, Genres WHERE id_film = '".$id."';");

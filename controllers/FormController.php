@@ -15,15 +15,13 @@ $new_date=$_POST['date'];
 $new_description=$_POST['description'];
 $new_realisateur=$_POST['realisateur'];
 $new_genre=$_POST['genre'];
+echo $new_genre;
 //$insert=1;
 $insert = sendNewMovieToDB($new_titre, $new_description, $new_date);
 $insert_film=sendNewRealToDB($new_realisateur);
  
-
-$update_real=updateTheReal();
-
-
-
+$insert_genre=sendNewGenreToDB($new_genre);
+//$update_real=updateTheReal();
 
 include('views/ResultView.php');
 } else {
