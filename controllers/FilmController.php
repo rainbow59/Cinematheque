@@ -4,6 +4,7 @@
 include('models/Film.php');
 include('models/Genre.php');
 include('models/Realisateur.php');
+include('models/Acteurs.php');
 
 //Récupérer les données (ici, on est sur la page d'un film précis donc on récupère un seul film en fonction de l'ID)
 $id=$_GET['id'];
@@ -12,7 +13,9 @@ $realisateur = getOneRealisateur($id);
 $genre = getOneGenre($id);
 //$genres = getAllGenres();
 
-var_dump(getOneGenre($id));
+$actors=getTheActors($id);
+
+
 //traiter les données
 $realisateur['realisateur'] = ucfirst($realisateur['realisateur']); //Met une majuscule au nom du réalisateur
 

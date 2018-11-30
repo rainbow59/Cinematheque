@@ -19,11 +19,28 @@
     <li>Sorti en <?=$movie['annee_sortie']?></li>
     <li>Réalisé par <?=$realisateur['realisateur']?></li>
     <li>Genre : <?php
-    	echo $genre['genre'];
+
+
+
+foreach ($genre as $key => $genre) {
+  echo $genre['genre'].' ';
+
+} 
  
- 
+// A trouver plus trd, comment enlever la dernière virgule :
+//echo trim($test, ',');
+// echo 'substr';
+// echo substr($test, 0, strpos($test, ','));
+
 ?>
 </li>
+<li>Acteurs : <?php
+
+foreach ($actors as $key => $actors) {
+  echo $actors['acteurs'].', ';
+
+} 
+?></li>
     </ul>
     <h4>Synopsis</h4>
     <p><?=$movie['description']?></p>
