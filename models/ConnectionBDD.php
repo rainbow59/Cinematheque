@@ -1,10 +1,10 @@
 <?php
 
-$host = '127.0.0.1';
-	$db = 'Cinematheque';
-	$user ='phpmyadmin';
-	$pass = 'aleth';
-	$charset = 'utf8mb4';
+	$host = 'localhost';
+	$db = 'cinematheque';
+	$user ='root';
+	$pass = 'Lolorainbow!';
+	$charset = 'UTF8';
 
 	$dbh = "mysql:host=$host;dbname=$db;charset=$charset";
 	$options = [

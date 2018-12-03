@@ -1,5 +1,6 @@
 RewriteEngine on
-RewriteBase /Projet_12_allocine/
-RewriteCond %{REQUESET_FILENAME}% !-f
-RewriteCond %{REQUESET_FILENAME}% !-d
+RewriteBase /cinematheque/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php?page=$1 [NC,L,QSA]
+

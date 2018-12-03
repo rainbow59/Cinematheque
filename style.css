@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+
+body {
+    font-family: 'Ubuntu+Condensed';
+    background-image: url("/images/background.png");
+}
+
+/*   Menu de navigation   */
+
+.nav {
+    text-align: center;
+    padding-left: 280px;
+}
+.nav-item {
+    margin-right: 50px;
+    font-size: 1.3em;
+}
+
+.navbar {
+    padding-left: 50px;
+}
+
+.nav-text {
+    display: block;
+    position: absolute;
+    right: 50px;
+    color:hsl(315, 96%, 10%);
+    font-size: 1.1em;
+}
